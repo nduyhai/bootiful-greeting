@@ -7,10 +7,10 @@
     <groupId>com.bootiful</groupId>
     <artifactId>bootiful</artifactId>
     <version>0.0.1</version>
-    <relativePath/> <!-- lookup parent from repository -->
+    <relativePath>../pom.xml</relativePath>
   </parent>
   <artifactId>bootiful-greeting</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1</version>
   <name>bootiful-greeting</name>
   <description>bootiful-greeting</description>
   <properties>
