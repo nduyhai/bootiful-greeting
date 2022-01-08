@@ -8,8 +8,11 @@ spring:
     admin:
       client:
         url: ${ADMIN_SERVICE:http://localhost:9090}
-
-
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${AUTHORIZATION_SERVICE:https://localhost:9000/}issuer
 management:
   endpoints:
     web:
