@@ -1,6 +1,7 @@
 package com.bootiful.greeting.config;
 
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -30,6 +31,8 @@ public class ResourceServerConfig extends WebSecurityConfigurerAdapter {
         .and()
         .authorizeHttpRequests()
         .antMatchers(PUBLIC_ENDPOINTS)
+        .permitAll()
+        .antMatchers(HttpMethod.GET, "/greeting")
         .permitAll()
         .and()
         .authorizeHttpRequests()

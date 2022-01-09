@@ -12,7 +12,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: ${AUTHORIZATION_SERVICE:https://localhost:9000/}issuer
+          jwk-set-uri: ${AUTHORIZATION_SERVICE:http://localhost:9000}/oauth2/jwks
 management:
   endpoints:
     web:
